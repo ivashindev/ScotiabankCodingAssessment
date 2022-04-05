@@ -10,7 +10,7 @@ import Foundation
 struct PresentationItemMapper {
     
     static func mapToTracksDictionary(from albums: [Album]) -> [Int: [PresentationItem]] {
-        return albums.reduce(into: [Int: [PresentationItem]]()) { partialResult, element in
+        var tracksMap = albums.reduce(into: [Int: [PresentationItem]]()) { partialResult, element in
             let item = PresentationItem(id: element.id,
                                         title: element.title,
                                         coverImageURL: URL(string: element.thumbnailUrl))
@@ -21,6 +21,9 @@ struct PresentationItemMapper {
                 partialResult[element.albumId]!.append(item)
             }
         }
+    
+        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id < $1.id } )}
+        return tracksMap
     }
     
     static func mapToPresentationItems(from tracksDictionary: [Int: [PresentationItem]]) -> [PresentationItem] {
@@ -32,6 +35,6 @@ struct PresentationItemMapper {
             partialResult.append(PresentationItem(id: element,
                                                   title: title,
                                                   coverImageURL: coverImageURL))
-        }
+        }.sorted(by: { $0.id < $1.id })
     }
 }

@@ -26,9 +26,9 @@ class AlbumsViewModel: ViewModel {
         
         albumsFetchService
             .fetchAlbums()
+            .replaceError(with: self.albumsFetchService.getCachedAlbums())
             .sink { _ in
-                let cachedAlbums = self.albumsFetchService.getCachedAlbums()
-                self.handleAlbumItems(cachedAlbums)
+                
             } receiveValue: { albums in
                 self.handleAlbumItems(albums)
             }
@@ -41,11 +41,9 @@ class AlbumsViewModel: ViewModel {
     
     private func handleAlbumItems(_ items: [Album]) {
         tracksMap = PresentationItemMapper.mapToTracksDictionary(from: items)
-        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id < $1.id } )}
         DispatchQueue.main.async {
             self.presentationItems = PresentationItemMapper
                 .mapToPresentationItems(from: self.tracksMap)
-                .sorted(by: { $0.id < $1.id })
         }
     }
 }

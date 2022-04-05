@@ -17,7 +17,8 @@ enum Endpoint {
     static let photos = "photos/"
 }
 
-class RestRequestHandler: HTTPSClient {
+class RestRequestService: HTTPSClient {
+    
     func request(url: URL) -> AnyPublisher<Data, Error> {
         return URLSession
             .shared

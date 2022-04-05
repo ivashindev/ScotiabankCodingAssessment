@@ -41,7 +41,7 @@ class AlbumsFetchService: AlbumsRepository {
         do {
             return try self.database
                 .getAlbumItems()
-                .map { $0.toAlbumItemEntity() }
+                .map { $0.toAlbum() }
         } catch {
             return []
         }
@@ -50,6 +50,7 @@ class AlbumsFetchService: AlbumsRepository {
     private func saveAlbumsIfNeeded(_ albumItems: [Album]) throws ->  [Album] {
         let currentAlbumsSnapshot = getCachedAlbums()
         if albumItems != currentAlbumsSnapshot {
+            try database.clear()
             let albumItemEntities = albumItems.map { $0.toAlbumItemEntity() }
             try database.setAlbumItems(albumItemEntities)
         }

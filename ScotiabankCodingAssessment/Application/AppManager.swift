@@ -13,7 +13,7 @@ class AppManager {
     let albumsRepository: AlbumsRepository
     
     private convenience init() {
-        let httpsClient = RestRequestHandler()
+        let httpsClient = RestRequestService()
         let database = RealmDatabase()
         let albumsRepository = AlbumsFetchService(httpsClient: httpsClient,
                                                    database: database)
@@ -23,6 +23,5 @@ class AppManager {
     
     private init(albumsRepository: AlbumsRepository) {
         self.albumsRepository = albumsRepository
-        self.albumsRepository.fetchAlbums()
     }
 }

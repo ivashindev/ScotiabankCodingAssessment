@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+#if !TEST
 struct TracksView: View {
     
     private var gridItemLayout = [GridItem(.fixed(160)), GridItem(.fixed(160))]
@@ -27,3 +28,4 @@ struct TracksView: View {
         }
     }
 }
+#endif
