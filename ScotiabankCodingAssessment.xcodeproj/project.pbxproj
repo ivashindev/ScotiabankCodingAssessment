@@ -8,12 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		2A3CB45727FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB45627FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift */; };
-		2A3CB45927FB3AF700BC27B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB45827FB3AF700BC27B9 /* ContentView.swift */; };
+		2A3CB45927FB3AF700BC27B9 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB45827FB3AF700BC27B9 /* AlbumsView.swift */; };
 		2A3CB45B27FB3AF900BC27B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3CB45A27FB3AF900BC27B9 /* Assets.xcassets */; };
 		2A3CB45E27FB3AF900BC27B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3CB45D27FB3AF900BC27B9 /* Preview Assets.xcassets */; };
 		2A3CB46827FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB46727FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests.swift */; };
 		2A3CB47227FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB47127FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITests.swift */; };
 		2A3CB47427FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB47327FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITestsLaunchTests.swift */; };
+		2A3CB48427FB3BC000BC27B9 /* AlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */; };
+		2A3CB48627FB3BD800BC27B9 /* HttpsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48527FB3BD800BC27B9 /* HttpsClient.swift */; };
+		2A3CB48927FB3C1F00BC27B9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48827FB3C1F00BC27B9 /* Database.swift */; };
+		2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */; };
+		2A3CB48E27FB3F1B00BC27B9 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */; };
+		2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */; };
+		2AFE6D9227FC6DA200A82BF5 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */; };
+		2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */; };
+		2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */; };
+		2AFE6D9927FC6F4D00A82BF5 /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */; };
+		2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */; };
+		2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9D27FC711A00A82BF5 /* Album.swift */; };
+		2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */; };
+		345EF0E8F3070586A80DA520 /* Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768BFD8C02113E1959C14679 /* Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework */; };
+		46D6663F6EF2A27494297910 /* Pods_ScotiabankCodingAssessment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBCCEA890A5F418F4EC7C7B5 /* Pods_ScotiabankCodingAssessment.framework */; };
+		DBB812D5A1802CE7B32CBA44 /* Pods_ScotiabankCodingAssessmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F5A6F281934E5F1E1B89E0C /* Pods_ScotiabankCodingAssessmentTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F5A6F281934E5F1E1B89E0C /* Pods_ScotiabankCodingAssessmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScotiabankCodingAssessmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		20DACB6892CDCA3742D73DEB /* Pods-ScotiabankCodingAssessment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessment.debug.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessment/Pods-ScotiabankCodingAssessment.debug.xcconfig"; sourceTree = "<group>"; };
+		29701067A24A50A7C06CED20 /* Pods-ScotiabankCodingAssessment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessment.release.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessment/Pods-ScotiabankCodingAssessment.release.xcconfig"; sourceTree = "<group>"; };
 		2A3CB45327FB3AF700BC27B9 /* ScotiabankCodingAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScotiabankCodingAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3CB45627FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotiabankCodingAssessmentApp.swift; sourceTree = "<group>"; };
-		2A3CB45827FB3AF700BC27B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2A3CB45827FB3AF700BC27B9 /* AlbumsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsView.swift; sourceTree = "<group>"; };
 		2A3CB45A27FB3AF900BC27B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3CB45D27FB3AF900BC27B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A3CB46327FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotiabankCodingAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +63,25 @@
 		2A3CB46D27FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotiabankCodingAssessmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3CB47127FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotiabankCodingAssessmentUITests.swift; sourceTree = "<group>"; };
 		2A3CB47327FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScotiabankCodingAssessmentUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepository.swift; sourceTree = "<group>"; };
+		2A3CB48527FB3BD800BC27B9 /* HttpsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpsClient.swift; sourceTree = "<group>"; };
+		2A3CB48827FB3C1F00BC27B9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
+		2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
+		2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
+		2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
+		2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItemMapper.swift; sourceTree = "<group>"; };
+		2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
+		2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItem.swift; sourceTree = "<group>"; };
+		2AFE6D9D27FC711A00A82BF5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
+		46F337B1DD1018E1CB7ED647 /* Pods-ScotiabankCodingAssessmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessmentTests.debug.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessmentTests/Pods-ScotiabankCodingAssessmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		768BFD8C02113E1959C14679 /* Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A16BB4E5F436523D39DFDCF0 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.debug.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DBCCEA890A5F418F4EC7C7B5 /* Pods_ScotiabankCodingAssessment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ScotiabankCodingAssessment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5CB3CC6ACEA40D093788866 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.release.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E83F5641B5323649BC8B14A2 /* Pods-ScotiabankCodingAssessmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ScotiabankCodingAssessmentTests.release.xcconfig"; path = "Target Support Files/Pods-ScotiabankCodingAssessmentTests/Pods-ScotiabankCodingAssessmentTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D6663F6EF2A27494297910 /* Pods_ScotiabankCodingAssessment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB812D5A1802CE7B32CBA44 /* Pods_ScotiabankCodingAssessmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				345EF0E8F3070586A80DA520 /* Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +119,8 @@
 				2A3CB46627FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests */,
 				2A3CB47027FB3AFA00BC27B9 /* ScotiabankCodingAssessmentUITests */,
 				2A3CB45427FB3AF700BC27B9 /* Products */,
+				81B14439B3049333EFBE9B14 /* Pods */,
+				49AE046787C3882CB5C3FD6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,8 +137,11 @@
 		2A3CB45527FB3AF700BC27B9 /* ScotiabankCodingAssessment */ = {
 			isa = PBXGroup;
 			children = (
-				2A3CB45627FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift */,
-				2A3CB45827FB3AF700BC27B9 /* ContentView.swift */,
+				2AFE6D9327FC6E1D00A82BF5 /* Constants */,
+				2A3CB48C27FB3EF400BC27B9 /* Application */,
+				2A3CB48227FB3B4B00BC27B9 /* Services */,
+				2A3CB48127FB3B4000BC27B9 /* ViewModels */,
+				2A3CB48027FB3B3800BC27B9 /* Presentation */,
 				2A3CB45A27FB3AF900BC27B9 /* Assets.xcassets */,
 				2A3CB45C27FB3AF900BC27B9 /* Preview Content */,
 			);
@@ -127,6 +173,103 @@
 			path = ScotiabankCodingAssessmentUITests;
 			sourceTree = "<group>";
 		};
+		2A3CB48027FB3B3800BC27B9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB45827FB3AF700BC27B9 /* AlbumsView.swift */,
+				2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */,
+				2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */,
+				2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */,
+				2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2A3CB48127FB3B4000BC27B9 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */,
+				2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2A3CB48227FB3B4B00BC27B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE6DA227FC727600A82BF5 /* Networking */,
+				2AFE6D9F27FC714D00A82BF5 /* Persistancy */,
+				2AFE6D9C27FC70F600A82BF5 /* Repository */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2A3CB48C27FB3EF400BC27B9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB45627FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift */,
+				2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2AFE6D9327FC6E1D00A82BF5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		2AFE6D9C27FC70F600A82BF5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */,
+				2AFE6D9D27FC711A00A82BF5 /* Album.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		2AFE6D9F27FC714D00A82BF5 /* Persistancy */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB48827FB3C1F00BC27B9 /* Database.swift */,
+				2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */,
+			);
+			path = Persistancy;
+			sourceTree = "<group>";
+		};
+		2AFE6DA227FC727600A82BF5 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				2A3CB48527FB3BD800BC27B9 /* HttpsClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		49AE046787C3882CB5C3FD6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBCCEA890A5F418F4EC7C7B5 /* Pods_ScotiabankCodingAssessment.framework */,
+				768BFD8C02113E1959C14679 /* Pods_ScotiabankCodingAssessment_ScotiabankCodingAssessmentUITests.framework */,
+				0F5A6F281934E5F1E1B89E0C /* Pods_ScotiabankCodingAssessmentTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81B14439B3049333EFBE9B14 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				20DACB6892CDCA3742D73DEB /* Pods-ScotiabankCodingAssessment.debug.xcconfig */,
+				29701067A24A50A7C06CED20 /* Pods-ScotiabankCodingAssessment.release.xcconfig */,
+				A16BB4E5F436523D39DFDCF0 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.debug.xcconfig */,
+				E5CB3CC6ACEA40D093788866 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.release.xcconfig */,
+				46F337B1DD1018E1CB7ED647 /* Pods-ScotiabankCodingAssessmentTests.debug.xcconfig */,
+				E83F5641B5323649BC8B14A2 /* Pods-ScotiabankCodingAssessmentTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +277,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3CB47727FB3AFA00BC27B9 /* Build configuration list for PBXNativeTarget "ScotiabankCodingAssessment" */;
 			buildPhases = (
+				908974D5F3148830D1AD0A27 /* [CP] Check Pods Manifest.lock */,
 				2A3CB44F27FB3AF700BC27B9 /* Sources */,
 				2A3CB45027FB3AF700BC27B9 /* Frameworks */,
 				2A3CB45127FB3AF700BC27B9 /* Resources */,
+				66815C950A047BC2F36CC8C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +296,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3CB47A27FB3AFA00BC27B9 /* Build configuration list for PBXNativeTarget "ScotiabankCodingAssessmentTests" */;
 			buildPhases = (
+				E875B14C71B65B2A9AD8A1CF /* [CP] Check Pods Manifest.lock */,
 				2A3CB45F27FB3AFA00BC27B9 /* Sources */,
 				2A3CB46027FB3AFA00BC27B9 /* Frameworks */,
 				2A3CB46127FB3AFA00BC27B9 /* Resources */,
@@ -169,9 +315,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3CB47D27FB3AFA00BC27B9 /* Build configuration list for PBXNativeTarget "ScotiabankCodingAssessmentUITests" */;
 			buildPhases = (
+				32802BA187B1A7F6023772E3 /* [CP] Check Pods Manifest.lock */,
 				2A3CB46927FB3AFA00BC27B9 /* Sources */,
 				2A3CB46A27FB3AFA00BC27B9 /* Frameworks */,
 				2A3CB46B27FB3AFA00BC27B9 /* Resources */,
+				A7B00977FE406E936B1068DE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,13 +400,129 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		32802BA187B1A7F6023772E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		66815C950A047BC2F36CC8C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment/Pods-ScotiabankCodingAssessment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment/Pods-ScotiabankCodingAssessment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment/Pods-ScotiabankCodingAssessment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		908974D5F3148830D1AD0A27 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScotiabankCodingAssessment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7B00977FE406E936B1068DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests/Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E875B14C71B65B2A9AD8A1CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ScotiabankCodingAssessmentTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A3CB44F27FB3AF700BC27B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A3CB45927FB3AF700BC27B9 /* ContentView.swift in Sources */,
+				2A3CB48E27FB3F1B00BC27B9 /* AppManager.swift in Sources */,
+				2AFE6D9227FC6DA200A82BF5 /* CellItem.swift in Sources */,
+				2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */,
+				2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */,
+				2A3CB45927FB3AF700BC27B9 /* AlbumsView.swift in Sources */,
+				2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */,
+				2A3CB48427FB3BC000BC27B9 /* AlbumsRepository.swift in Sources */,
+				2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */,
+				2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */,
+				2A3CB48627FB3BD800BC27B9 /* HttpsClient.swift in Sources */,
+				2AFE6D9927FC6F4D00A82BF5 /* TracksViewModel.swift in Sources */,
+				2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */,
 				2A3CB45727FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift in Sources */,
+				2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */,
+				2A3CB48927FB3C1F00BC27B9 /* Database.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +677,7 @@
 		};
 		2A3CB47827FB3AFA00BC27B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20DACB6892CDCA3742D73DEB /* Pods-ScotiabankCodingAssessment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -442,6 +707,7 @@
 		};
 		2A3CB47927FB3AFA00BC27B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29701067A24A50A7C06CED20 /* Pods-ScotiabankCodingAssessment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -471,6 +737,7 @@
 		};
 		2A3CB47B27FB3AFA00BC27B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46F337B1DD1018E1CB7ED647 /* Pods-ScotiabankCodingAssessmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +758,7 @@
 		};
 		2A3CB47C27FB3AFA00BC27B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E83F5641B5323649BC8B14A2 /* Pods-ScotiabankCodingAssessmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +779,7 @@
 		};
 		2A3CB47E27FB3AFA00BC27B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A16BB4E5F436523D39DFDCF0 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +798,7 @@
 		};
 		2A3CB47F27FB3AFA00BC27B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5CB3CC6ACEA40D093788866 /* Pods-ScotiabankCodingAssessment-ScotiabankCodingAssessmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

@@ -11,7 +11,7 @@ import SwiftUI
 struct ScotiabankCodingAssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AlbumsView()
         }
     }
 }
