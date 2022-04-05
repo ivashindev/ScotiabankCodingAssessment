@@ -11,11 +11,7 @@ import SwiftUI
 struct ScotiabankCodingAssessmentApp: App {
     var body: some Scene {
         WindowGroup {
-            #if !TEST
             AlbumsView()
-            #else
-            EmptyView()
-            #endif
         }
     }
 }

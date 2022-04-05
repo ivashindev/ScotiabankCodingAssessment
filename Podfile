@@ -10,8 +10,4 @@ target 'ScotiabankCodingAssessment' do
     # Pods for testing
   end
 
-  target 'ScotiabankCodingAssessmentUITests' do
-    # Pods for testing
-  end
-
 end

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !TEST
+
 struct AlbumsView: View {
     
     private var gridItemLayout = [GridItem(.fixed(160)), GridItem(.fixed(160))]
@@ -35,4 +35,4 @@ struct AlbumsView: View {
         }
     }
 }
-#endif
+

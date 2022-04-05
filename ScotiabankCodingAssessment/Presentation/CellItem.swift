@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-#if !TEST
+
 struct CellItem: View {
     
     let presentationItem: PresentationItem
@@ -24,4 +24,4 @@ struct CellItem: View {
         }
     }
 }
-#endif
+

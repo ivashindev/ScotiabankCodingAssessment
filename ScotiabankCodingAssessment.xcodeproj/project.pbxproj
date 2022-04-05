@@ -154,10 +154,10 @@
 		2A3CB46627FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests */ = {
 			isa = PBXGroup;
 			children = (
-				2AFE6DB727FC8F2500A82BF5 /* PresentationTests */,
-				2AFE6DA327FC7A5000A82BF5 /* ServicesTests */,
+				2AFE6DB727FC8F2500A82BF5 /* Presentation */,
+				2AFE6DA327FC7A5000A82BF5 /* Services */,
 				2AFE6DB227FC7FE700A82BF5 /* Spies */,
-				2A85A95C27FC9F61004D6006 /* ViewModelTests */,
+				2A85A95C27FC9F61004D6006 /* ViewModels */,
 			);
 			path = ScotiabankCodingAssessmentTests;
 			sourceTree = "<group>";
@@ -202,13 +202,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		2A85A95C27FC9F61004D6006 /* ViewModelTests */ = {
+		2A85A95C27FC9F61004D6006 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */,
 				2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */,
 			);
-			path = ViewModelTests;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		2AFE6D9327FC6E1D00A82BF5 /* Constants */ = {
@@ -245,22 +245,22 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		2AFE6DA327FC7A5000A82BF5 /* ServicesTests */ = {
+		2AFE6DA327FC7A5000A82BF5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				2AFE6DAF27FC7F9A00A82BF5 /* Repository */,
 				2AFE6DAA27FC7D0500A82BF5 /* Persistancy */,
-				2AFE6DA427FC7A6300A82BF5 /* NetworkingTests */,
+				2AFE6DA427FC7A6300A82BF5 /* Networking */,
 			);
-			path = ServicesTests;
+			path = Services;
 			sourceTree = "<group>";
 		};
-		2AFE6DA427FC7A6300A82BF5 /* NetworkingTests */ = {
+		2AFE6DA427FC7A6300A82BF5 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
 				2AFE6DA527FC7A8300A82BF5 /* RestRequestServiceTests.swift */,
 			);
-			path = NetworkingTests;
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		2AFE6DAA27FC7D0500A82BF5 /* Persistancy */ = {
@@ -290,12 +290,12 @@
 			path = Spies;
 			sourceTree = "<group>";
 		};
-		2AFE6DB727FC8F2500A82BF5 /* PresentationTests */ = {
+		2AFE6DB727FC8F2500A82BF5 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				2AFE6DB827FC8F3D00A82BF5 /* PresentationItemMapperTests.swift */,
 			);
-			path = PresentationTests;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		49AE046787C3882CB5C3FD6C /* Frameworks */ = {
@@ -672,7 +672,6 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				"OTHER_SWIFT_FLAGS[arch=*]" = "-DTEST";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wertrewq.ScotiabankCodingAssessment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

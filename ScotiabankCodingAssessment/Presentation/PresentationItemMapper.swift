@@ -22,7 +22,7 @@ struct PresentationItemMapper {
             }
         }
     
-        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id < $1.id } )}
+        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id > $1.id } )}
         return tracksMap
     }
     
@@ -30,11 +30,11 @@ struct PresentationItemMapper {
         return tracksDictionary.keys.reduce(into: [PresentationItem]()) { partialResult, element in
             
             let title = Strings.albumTitle + " \(element)"
-            let coverImageURL = tracksDictionary[element]?.last?.coverImageURL
+            let coverImageURL = tracksDictionary[element]?.first?.coverImageURL
             
             partialResult.append(PresentationItem(id: element,
                                                   title: title,
                                                   coverImageURL: coverImageURL))
-        }.sorted(by: { $0.id < $1.id })
+        }.sorted(by: { $0.id > $1.id })
     }
 }
