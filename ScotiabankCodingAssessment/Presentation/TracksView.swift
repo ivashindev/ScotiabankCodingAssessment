@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TracksView: View {
     
-    private var gridItemLayout = [GridItem(.fixed(160)), GridItem(.fixed(160))]
+    private static let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
     @ObservedObject var tracksViewModel: TracksViewModel
     
@@ -19,11 +19,11 @@ struct TracksView: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: gridItemLayout, spacing: 8) {
+            LazyVGrid(columns: TracksView.gridItemLayout) {
                 ForEach(tracksViewModel.presentationItems, id: \.self) {
-                    CellItem(presentationItem: $0)
+                    CellView(presentationItem: $0)
                 }
-            }
-        }
+            }.padding()
+        }.navigationTitle(Text(Strings.tracks))
     }
 }

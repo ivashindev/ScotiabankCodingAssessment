@@ -40,10 +40,12 @@ class AlbumsViewModel: ViewModel {
     }
     
     private func handleAlbumItems(_ items: [Album]) {
+        /// Creates hash map for tracks first since it looks more efficient
+        /// Then maps presentationItems for Albums VM from tracks map
         tracksMap = PresentationItemMapper.mapToTracksDictionary(from: items)
+        let presentationItems = PresentationItemMapper.mapToPresentationItems(from: self.tracksMap)
         DispatchQueue.main.async {
-            self.presentationItems = PresentationItemMapper
-                .mapToPresentationItems(from: self.tracksMap)
+            self.presentationItems = presentationItems
         }
     }
 }

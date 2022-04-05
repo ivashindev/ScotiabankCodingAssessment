@@ -49,7 +49,9 @@ class AlbumsFetchService: AlbumsRepository {
     
     private func saveAlbumsIfNeeded(_ albumItems: [Album]) throws ->  [Album] {
         let currentAlbumsSnapshot = getCachedAlbums()
+        /// Updates DB only if latest data fetched differs from already saved
         if albumItems != currentAlbumsSnapshot {
+            /// Operating on data snapshots requires to delete stale data first
             try database.clear()
             let albumItemEntities = albumItems.map { $0.toAlbumItemEntity() }
             try database.setAlbumItems(albumItemEntities)

@@ -21,7 +21,7 @@ struct PresentationItemMapper {
                 partialResult[element.albumId]!.append(item)
             }
         }
-    
+        /// Sorted to start tracks list from the highest id
         tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id > $1.id } )}
         return tracksMap
     }
@@ -35,6 +35,7 @@ struct PresentationItemMapper {
             partialResult.append(PresentationItem(id: element,
                                                   title: title,
                                                   coverImageURL: coverImageURL))
-        }.sorted(by: { $0.id > $1.id })
+        } /// Sorted to start albums list from the highest id
+        .sorted(by: { $0.id > $1.id })
     }
 }

@@ -10,4 +10,6 @@ import Foundation
 enum Strings {
     static let albumsNavigationTitle = "Albums"
     static let albumTitle = "Album"
+    
+    static let tracks = "Tracks"
 }

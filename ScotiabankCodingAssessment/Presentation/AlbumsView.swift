@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AlbumsView: View {
     
-    private var gridItemLayout = [GridItem(.fixed(160)), GridItem(.fixed(160))]
+    private static let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
     @ObservedObject var viewModel = AlbumsViewModel()
     
@@ -18,19 +18,19 @@ struct AlbumsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: gridItemLayout) {
+                LazyVGrid(columns: AlbumsView.gridItemLayout) {
                     ForEach(viewModel.presentationItems, id: \.self) { item in
                         let tracksViewModel = TracksViewModel(presentationItems: viewModel.tracksMap[item.id]!)
                         ZStack {
-                            CellItem(presentationItem: item)
+                            CellView(presentationItem: item)
                                 .onTapGesture {
                                     current = item.id
                                 }
                             NavigationLink("", destination: TracksView(tracksViewModel: tracksViewModel),
                                            tag: item.id, selection: $current)
-                        }.padding()
+                        }
                     }
-                }
+                }.padding()
             }.navigationTitle(Strings.albumsNavigationTitle)
         }
     }

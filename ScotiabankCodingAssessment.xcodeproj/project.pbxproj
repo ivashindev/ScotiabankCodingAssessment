@@ -19,8 +19,9 @@
 		2A85A95E27FC9FC9004D6006 /* AlbumsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */; };
 		2A85A96027FCA1DE004D6006 /* TracksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */; };
 		2A85A96227FCA638004D6006 /* AlbumsRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */; };
+		2A85A96527FCD2B4004D6006 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A85A96427FCD2B4004D6006 /* CachedAsyncImage */; };
 		2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */; };
-		2AFE6D9227FC6DA200A82BF5 /* CellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */; };
+		2AFE6D9227FC6DA200A82BF5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9127FC6DA200A82BF5 /* CellView.swift */; };
 		2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */; };
 		2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */; };
 		2AFE6D9927FC6F4D00A82BF5 /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */; };
@@ -67,7 +68,7 @@
 		2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModelTests.swift; sourceTree = "<group>"; };
 		2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepositorySpy.swift; sourceTree = "<group>"; };
 		2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
-		2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellItem.swift; sourceTree = "<group>"; };
+		2AFE6D9127FC6DA200A82BF5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItemMapper.swift; sourceTree = "<group>"; };
 		2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D6663F6EF2A27494297910 /* Pods_ScotiabankCodingAssessment.framework in Frameworks */,
+				2A85A96527FCD2B4004D6006 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +169,7 @@
 			children = (
 				2A3CB45827FB3AF700BC27B9 /* AlbumsView.swift */,
 				2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */,
-				2AFE6D9127FC6DA200A82BF5 /* CellItem.swift */,
+				2AFE6D9127FC6DA200A82BF5 /* CellView.swift */,
 				2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */,
 				2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */,
 			);
@@ -339,6 +341,9 @@
 			dependencies = (
 			);
 			name = ScotiabankCodingAssessment;
+			packageProductDependencies = (
+				2A85A96427FCD2B4004D6006 /* CachedAsyncImage */,
+			);
 			productName = ScotiabankCodingAssessment;
 			productReference = 2A3CB45327FB3AF700BC27B9 /* ScotiabankCodingAssessment.app */;
 			productType = "com.apple.product-type.application";
@@ -390,6 +395,9 @@
 				Base,
 			);
 			mainGroup = 2A3CB44A27FB3AF700BC27B9;
+			packageReferences = (
+				2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 2A3CB45427FB3AF700BC27B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -489,7 +497,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A3CB48E27FB3F1B00BC27B9 /* AppManager.swift in Sources */,
-				2AFE6D9227FC6DA200A82BF5 /* CellItem.swift in Sources */,
+				2AFE6D9227FC6DA200A82BF5 /* CellView.swift in Sources */,
 				2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */,
 				2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */,
 				2A3CB45927FB3AF700BC27B9 /* AlbumsView.swift in Sources */,
@@ -662,9 +670,9 @@
 				DEVELOPMENT_TEAM = PUK34QK43Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScotiabankCodingAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -692,9 +700,9 @@
 				DEVELOPMENT_TEAM = PUK34QK43Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ScotiabankCodingAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -785,6 +793,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2A85A96427FCD2B4004D6006 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A3CB44B27FB3AF700BC27B9 /* Project object */;
 }
