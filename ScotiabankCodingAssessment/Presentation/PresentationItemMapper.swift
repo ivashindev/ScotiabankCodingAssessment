@@ -22,7 +22,7 @@ struct PresentationItemMapper {
             }
         }
         /// Sorted to start tracks list from the highest id
-        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id > $1.id } )}
+        tracksMap.keys.forEach { tracksMap[$0]!.sort(by: { $0.id < $1.id } )}
         return tracksMap
     }
     
@@ -36,6 +36,6 @@ struct PresentationItemMapper {
                                                   title: title,
                                                   coverImageURL: coverImageURL))
         } /// Sorted to start albums list from the highest id
-        .sorted(by: { $0.id > $1.id })
+        .sorted(by: { $0.id < $1.id })
     }
 }

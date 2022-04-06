@@ -33,11 +33,11 @@ class PresentationItemMapperTests: XCTestCase {
         ]
         
         let albumsExpectedOutput: [PresentationItem] = [
-            PresentationItem(id: 1,
-                             title: "Album 1",
-                             coverImageURL: URL(string: "https://")),
             PresentationItem(id: 0,
                              title: "Album 0",
+                             coverImageURL: URL(string: "https://")),
+            PresentationItem(id: 1,
+                             title: "Album 1",
                              coverImageURL: URL(string: "https://"))
         ]
         
@@ -67,10 +67,10 @@ class PresentationItemMapperTests: XCTestCase {
         
         let expectedTracksDictionaryOutput = [
             0: [
-                PresentationItem(id: 1,
+                PresentationItem(id: 0,
                                  title: "<title>",
                                  coverImageURL: nil),
-                PresentationItem(id: 0,
+                PresentationItem(id: 1,
                                  title: "<title>",
                                  coverImageURL: nil)
             ],
