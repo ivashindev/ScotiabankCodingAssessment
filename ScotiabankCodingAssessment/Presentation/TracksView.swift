@@ -11,16 +11,16 @@ struct TracksView: View {
     
     private static let gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     
-    @ObservedObject var tracksViewModel: TracksViewModel
+    private let tracks: [PresentationItem]
     
-    init(tracksViewModel: TracksViewModel) {
-        self.tracksViewModel = tracksViewModel
+    init(tracks: [PresentationItem]) {
+        self.tracks = tracks
     }
     
     var body: some View {
         ScrollView {
             LazyVGrid(columns: TracksView.gridItemLayout) {
-                ForEach(tracksViewModel.presentationItems, id: \.self) {
+                ForEach(tracks, id: \.id) {
                     CellView(presentationItem: $0)
                 }
             }.padding()

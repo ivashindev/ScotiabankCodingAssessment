@@ -9,7 +9,7 @@ import XCTest
 @testable import ScotiabankCodingAssessment
 
 class DatabaseTests: XCTestCase {
-
+    
     func testSetterAndGetter() {
         let albumEntities = [
             AlbumEntity.create(withAlbumId: 0,

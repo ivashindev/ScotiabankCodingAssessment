@@ -9,13 +9,13 @@ import Foundation
 @testable import ScotiabankCodingAssessment
 
 class DatabaseSpy: Database {
-
+    
     var invokedSetAlbumItems = false
     var invokedSetAlbumItemsCount = 0
     var invokedSetAlbumItemsParameters: (items: [AlbumEntity], Void)?
     var invokedSetAlbumItemsParametersList = [(items: [AlbumEntity], Void)]()
     var stubbedSetAlbumItemsError: Error?
-
+    
     func setAlbumItems(_ items: [AlbumEntity]) throws {
         invokedSetAlbumItems = true
         invokedSetAlbumItemsCount += 1
@@ -25,12 +25,12 @@ class DatabaseSpy: Database {
             throw error
         }
     }
-
+    
     var invokedGetAlbumItems = false
     var invokedGetAlbumItemsCount = 0
     var stubbedGetAlbumItemsError: Error?
     var stubbedGetAlbumItemsResult: [AlbumEntity]! = []
-
+    
     func getAlbumItems() throws -> [AlbumEntity] {
         invokedGetAlbumItems = true
         invokedGetAlbumItemsCount += 1
@@ -39,11 +39,11 @@ class DatabaseSpy: Database {
         }
         return stubbedGetAlbumItemsResult
     }
-
+    
     var invokedClear = false
     var invokedClearCount = 0
     var stubbedClearError: Error?
-
+    
     func clear() throws {
         invokedClear = true
         invokedClearCount += 1

@@ -18,9 +18,9 @@ struct Album: Codable, Equatable {
 extension Album {
     func toAlbumItemEntity() -> AlbumEntity {
         return AlbumEntity.create(withAlbumId: albumId,
-                                      id: id,
-                                      title: title,
-                                      url: url,
-                                      thumbnailUrl: thumbnailUrl)
+                                  id: id,
+                                  title: title,
+                                  url: url,
+                                  thumbnailUrl: thumbnailUrl)
     }
 }

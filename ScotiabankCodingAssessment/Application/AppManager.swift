@@ -16,7 +16,7 @@ class AppManager {
         let httpsClient = RestRequestService()
         let database = RealmDatabase()
         let albumsRepository = AlbumsFetchService(httpsClient: httpsClient,
-                                                   database: database)
+                                                  database: database)
         
         self.init(albumsRepository: albumsRepository)
     }

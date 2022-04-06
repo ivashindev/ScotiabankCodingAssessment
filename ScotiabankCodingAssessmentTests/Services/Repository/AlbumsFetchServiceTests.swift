@@ -168,7 +168,7 @@ class AlbumsFetchServiceTests: XCTestCase {
                                                     database: databaseSpy)
         
         let fetchedAlbums = albumsFetchService.getCachedAlbums()
-
+        
         XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
         XCTAssertEqual(fetchedAlbums, [])
     }
