@@ -9,6 +9,6 @@ import XCTest
 @testable import ScotiabankCodingAssessment
 
 class RestRequestServiceTests: XCTestCase {
-
+    
     func testRequest() { }
 }

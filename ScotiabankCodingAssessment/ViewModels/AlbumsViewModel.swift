@@ -8,11 +8,7 @@
 import SwiftUI
 import Combine
 
-protocol ViewModel: ObservableObject {
-    var presentationItems: [PresentationItem] { get }
-}
-
-class AlbumsViewModel: ViewModel {
+class AlbumsViewModel: ObservableObject {
     
     @Published var presentationItems: [PresentationItem] = []
     

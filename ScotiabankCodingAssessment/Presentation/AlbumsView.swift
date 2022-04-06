@@ -19,14 +19,14 @@ struct AlbumsView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: AlbumsView.gridItemLayout) {
-                    ForEach(viewModel.presentationItems, id: \.self) { item in
-                        let tracksViewModel = TracksViewModel(presentationItems: viewModel.tracksMap[item.id]!)
+                    ForEach(viewModel.presentationItems, id: \.id) { item in
+                        let tracks = viewModel.tracksMap[item.id]!
                         ZStack {
                             CellView(presentationItem: item)
                                 .onTapGesture {
                                     current = item.id
                                 }
-                            NavigationLink("", destination: TracksView(tracksViewModel: tracksViewModel),
+                            NavigationLink("", destination: TracksView(tracks: tracks),
                                            tag: item.id, selection: $current)
                         }
                     }

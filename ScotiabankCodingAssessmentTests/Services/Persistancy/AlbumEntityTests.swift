@@ -9,7 +9,7 @@ import XCTest
 @testable import ScotiabankCodingAssessment
 
 class AlbumEntityTests: XCTestCase {
-
+    
     func testCreate() {
         
         let albumId = 0
@@ -17,7 +17,7 @@ class AlbumEntityTests: XCTestCase {
         let title = "<title>"
         let url = "<url>"
         let thumbnailUrl = "<thumbnailUrl>"
-
+        
         let albumEntity = AlbumEntity.create(withAlbumId: albumId,
                                              id: id,
                                              title: title,
@@ -38,7 +38,7 @@ class AlbumEntityTests: XCTestCase {
         let title = "<title>"
         let url = "<url>"
         let thumbnailUrl = "<thumbnailUrl>"
-
+        
         let albumEntity = AlbumEntity.create(withAlbumId: albumId,
                                              id: id,
                                              title: title,

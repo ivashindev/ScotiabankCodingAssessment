@@ -20,11 +20,15 @@ struct CellView: View {
     var body: some View {
         ZStack {
             VStack(alignment: .center) {
-                CachedAsyncImage(url: presentationItem.coverImageURL)
-                    .frame(width: CellView.imageWidth,
-                           height: CellView.imageHeight,
-                           alignment: .center)
-                    .border(CellView.borderColor)
+                CachedAsyncImage(url: presentationItem.coverImageURL) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: CellView.imageWidth,
+                       height: CellView.imageHeight,
+                       alignment: .center)
+                .border(CellView.borderColor)
                 Text(presentationItem.title)
             }
             .padding(CellView.padding)

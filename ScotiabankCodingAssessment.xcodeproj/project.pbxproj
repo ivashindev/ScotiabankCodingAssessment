@@ -17,14 +17,12 @@
 		2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */; };
 		2A3CB48E27FB3F1B00BC27B9 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */; };
 		2A85A95E27FC9FC9004D6006 /* AlbumsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */; };
-		2A85A96027FCA1DE004D6006 /* TracksViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */; };
 		2A85A96227FCA638004D6006 /* AlbumsRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */; };
-		2A85A96527FCD2B4004D6006 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A85A96427FCD2B4004D6006 /* CachedAsyncImage */; };
+		2A85A96C27FD6CE2004D6006 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A85A96B27FD6CE2004D6006 /* CachedAsyncImage */; };
 		2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */; };
 		2AFE6D9227FC6DA200A82BF5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9127FC6DA200A82BF5 /* CellView.swift */; };
 		2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */; };
 		2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */; };
-		2AFE6D9927FC6F4D00A82BF5 /* TracksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */; };
 		2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */; };
 		2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9D27FC711A00A82BF5 /* Album.swift */; };
 		2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */; };
@@ -65,13 +63,11 @@
 		2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModelTests.swift; sourceTree = "<group>"; };
-		2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModelTests.swift; sourceTree = "<group>"; };
 		2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepositorySpy.swift; sourceTree = "<group>"; };
 		2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
 		2AFE6D9127FC6DA200A82BF5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItemMapper.swift; sourceTree = "<group>"; };
-		2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewModel.swift; sourceTree = "<group>"; };
 		2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItem.swift; sourceTree = "<group>"; };
 		2AFE6D9D27FC711A00A82BF5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
@@ -96,7 +92,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D6663F6EF2A27494297910 /* Pods_ScotiabankCodingAssessment.framework in Frameworks */,
-				2A85A96527FCD2B4004D6006 /* CachedAsyncImage in Frameworks */,
+				2A85A96C27FD6CE2004D6006 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +134,9 @@
 				2A3CB48C27FB3EF400BC27B9 /* Application */,
 				2AFE6D9327FC6E1D00A82BF5 /* Constants */,
 				2A3CB48027FB3B3800BC27B9 /* Presentation */,
-				2A3CB45C27FB3AF900BC27B9 /* Preview Content */,
 				2A3CB48227FB3B4B00BC27B9 /* Services */,
 				2A3CB48127FB3B4000BC27B9 /* ViewModels */,
+				2A3CB45C27FB3AF900BC27B9 /* Preview Content */,
 			);
 			path = ScotiabankCodingAssessment;
 			sourceTree = "<group>";
@@ -180,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */,
-				2AFE6D9827FC6F4D00A82BF5 /* TracksViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */,
-				2A85A95F27FCA1DE004D6006 /* TracksViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -342,7 +336,7 @@
 			);
 			name = ScotiabankCodingAssessment;
 			packageProductDependencies = (
-				2A85A96427FCD2B4004D6006 /* CachedAsyncImage */,
+				2A85A96B27FD6CE2004D6006 /* CachedAsyncImage */,
 			);
 			productName = ScotiabankCodingAssessment;
 			productReference = 2A3CB45327FB3AF700BC27B9 /* ScotiabankCodingAssessment.app */;
@@ -396,7 +390,7 @@
 			);
 			mainGroup = 2A3CB44A27FB3AF700BC27B9;
 			packageReferences = (
-				2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				2A85A96A27FD6CE2004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 2A3CB45427FB3AF700BC27B9 /* Products */;
 			projectDirPath = "";
@@ -506,7 +500,6 @@
 				2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */,
 				2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */,
 				2A3CB48627FB3BD800BC27B9 /* HttpsClient.swift in Sources */,
-				2AFE6D9927FC6F4D00A82BF5 /* TracksViewModel.swift in Sources */,
 				2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */,
 				2A3CB45727FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift in Sources */,
 				2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */,
@@ -527,7 +520,6 @@
 				2AFE6DB927FC8F3D00A82BF5 /* PresentationItemMapperTests.swift in Sources */,
 				2AFE6DB127FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift in Sources */,
 				2AFE6DA627FC7A8300A82BF5 /* RestRequestServiceTests.swift in Sources */,
-				2A85A96027FCA1DE004D6006 /* TracksViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,15 +656,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScotiabankCodingAssessment/Preview Content\"";
 				DEVELOPMENT_TEAM = PUK34QK43Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScotiabankCodingAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -694,15 +687,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScotiabankCodingAssessment/Preview Content\"";
 				DEVELOPMENT_TEAM = PUK34QK43Y;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ScotiabankCodingAssessment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -795,20 +789,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+		2A85A96A27FD6CE2004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2A85A96427FCD2B4004D6006 /* CachedAsyncImage */ = {
+		2A85A96B27FD6CE2004D6006 /* CachedAsyncImage */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2A85A96327FCD2B4004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			package = 2A85A96A27FD6CE2004D6006 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */

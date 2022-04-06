@@ -33,9 +33,9 @@ class AlbumEntity: Object {
 extension AlbumEntity {
     func toAlbum() -> Album {
         return Album(albumId: albumId,
-                         id: id,
-                         title: title,
-                         url: url,
-                         thumbnailUrl: thumbnailUrl)
+                     id: id,
+                     title: title,
+                     url: url,
+                     thumbnailUrl: thumbnailUrl)
     }
 }
