@@ -14,50 +14,50 @@ class AlbumsViewModelTests: XCTestCase {
     func testInit() {
         let expectation = XCTestExpectation(description: "")
         
-        let stubbedAlbums = [
-            Album(albumId: 0,
+        let stubbedTracks = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 0,
+            Track(albumId: 0,
                   id: 1,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "https://"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 2,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "https://"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
         
-        let albumsRepositorySpy = AlbumsRepositorySpy()
+        let tracksRepositorySpy = TracksRepositorySpy()
         
-        albumsRepositorySpy.stubbedFetchAlbumsResult = Future<[Album], Error> { promise in
+        tracksRepositorySpy.stubbedFetchTracksResult = Future<[Track], Error> { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 0.1) {
-                promise(.success(stubbedAlbums))
+                promise(.success(stubbedTracks))
                 expectation.fulfill()
             }
         }.eraseToAnyPublisher()
         
-        let albumsViewModel = AlbumsViewModel(albumsFetchService: albumsRepositorySpy)
+        let albumsViewModel = AlbumsViewModel(tracksFetchService: tracksRepositorySpy)
         
         wait(for: [expectation], timeout: 1.0)
         
-        XCTAssertEqual(albumsRepositorySpy.invokedFetchAlbumsCount, 1)
+        XCTAssertEqual(tracksRepositorySpy.invokedFetchTracksCount, 1)
         XCTAssertEqual(albumsViewModel.presentationItems, [PresentationItem(id: 0,
                                                                             title: "Album 0",
                                                                             coverImageURL: nil),
                                                            PresentationItem(id: 1,
                                                                             title: "Album 1",
                                                                             coverImageURL: nil)])
-        XCTAssertEqual(albumsViewModel.tracksMap, [1:
+        XCTAssertEqual(albumsViewModel.albumsMap, [1:
                                                     [PresentationItem(id: 0,
                                                                       title: "<title>",
                                                                       coverImageURL: nil),
@@ -76,39 +76,39 @@ class AlbumsViewModelTests: XCTestCase {
     func testWillPresentTracksView() {
         let expectation = XCTestExpectation(description: "")
         
-        let stubbedAlbums = [
-            Album(albumId: 0,
+        let stubbedTracks = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 0,
+            Track(albumId: 0,
                   id: 1,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "https://"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 2,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "https://"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
         
-        let albumsRepositorySpy = AlbumsRepositorySpy()
+        let tracksRepositorySpy = TracksRepositorySpy()
         
-        albumsRepositorySpy.stubbedFetchAlbumsResult = Future<[Album], Error> { promise in
+        tracksRepositorySpy.stubbedFetchTracksResult = Future<[Track], Error> { promise in
             DispatchQueue.global().asyncAfter(deadline: .now() + 0.1) {
-                promise(.success(stubbedAlbums))
+                promise(.success(stubbedTracks))
                 expectation.fulfill()
             }
         }.eraseToAnyPublisher()
         
-        let albumsViewModel = AlbumsViewModel(albumsFetchService: albumsRepositorySpy)
+        let albumsViewModel = AlbumsViewModel(tracksFetchService: tracksRepositorySpy)
         
         wait(for: [expectation], timeout: 1.0)
         

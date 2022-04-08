@@ -9,23 +9,23 @@ import Foundation
 import RealmSwift
 
 protocol Database {
-    func setAlbumItems(_ items: [AlbumEntity]) throws
-    func getAlbumItems() throws -> [AlbumEntity]
+    func setTracks(_ tracks: [TrackEntity]) throws
+    func getTracks() throws -> [TrackEntity]
     func clear() throws
 }
 
 class RealmDatabase: Database {
     
-    func setAlbumItems(_ items: [AlbumEntity]) throws {
+    func setTracks(_ tracks: [TrackEntity]) throws {
         let realm = try Realm()
         try realm.write {
-            realm.add(items)
+            realm.add(tracks)
         }
     }
     
-    func getAlbumItems() throws -> [AlbumEntity]  {
+    func getTracks() throws -> [TrackEntity]  {
         let realm = try Realm()
-        return realm.objects(AlbumEntity.self).map { $0 }
+        return realm.objects(TrackEntity.self).map { $0 }
     }
     
     func clear() throws {

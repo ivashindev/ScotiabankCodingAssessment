@@ -9,8 +9,8 @@ import Foundation
 
 struct PresentationItemMapper {
     
-    static func mapToTracksDictionary(from albums: [Album]) -> [Int: [PresentationItem]] {
-        var tracksMap = albums.reduce(into: [Int: [PresentationItem]]()) { partialResult, element in
+    static func mapToAlbumsDictionary(from tracks: [Track]) -> [Int: [PresentationItem]] {
+        var tracksMap = tracks.reduce(into: [Int: [PresentationItem]]()) { partialResult, element in
             let item = PresentationItem(id: element.id,
                                         title: element.title,
                                         coverImageURL: URL(string: element.thumbnailUrl))
@@ -26,11 +26,11 @@ struct PresentationItemMapper {
         return tracksMap
     }
     
-    static func mapToPresentationItems(from tracksDictionary: [Int: [PresentationItem]]) -> [PresentationItem] {
-        return tracksDictionary.keys.reduce(into: [PresentationItem]()) { partialResult, element in
+    static func mapToAlbumPresentationItems(from albumsDictionary: [Int: [PresentationItem]]) -> [PresentationItem] {
+        return albumsDictionary.keys.reduce(into: [PresentationItem]()) { partialResult, element in
             
             let title = Strings.albumTitle + " \(element)"
-            let coverImageURL = tracksDictionary[element]?.first?.coverImageURL
+            let coverImageURL = albumsDictionary[element]?.first?.coverImageURL
             
             partialResult.append(PresentationItem(id: element,
                                                   title: title,

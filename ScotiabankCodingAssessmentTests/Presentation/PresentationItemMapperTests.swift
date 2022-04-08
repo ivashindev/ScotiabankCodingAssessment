@@ -11,7 +11,7 @@ import XCTest
 class PresentationItemMapperTests: XCTestCase {
     
     func testMapToTracksDictionary() {
-        let tracksDictionaryInput: [Int: [PresentationItem]] = [
+        let albumsDictionaryInput: [Int: [PresentationItem]] = [
             0: [PresentationItem(id: 2,
                                  title: "<title>",
                                  coverImageURL: URL(string: "https://")),
@@ -41,31 +41,31 @@ class PresentationItemMapperTests: XCTestCase {
                              coverImageURL: URL(string: "https://"))
         ]
         
-        let albums = PresentationItemMapper.mapToPresentationItems(from: tracksDictionaryInput)
+        let albums = PresentationItemMapper.mapToAlbumPresentationItems(from: albumsDictionaryInput)
         
         XCTAssertEqual(albums, albumsExpectedOutput)
     }
     
     func testMapToPresentationItems() {
-        let albumsInput = [
-            Album(albumId: 0,
+        let tracksInput = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 0,
+            Track(albumId: 0,
                   id: 1,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 1,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
         
-        let expectedTracksDictionaryOutput = [
+        let expectedAlbumsDictionaryOutput = [
             0: [
                 PresentationItem(id: 0,
                                  title: "<title>",
@@ -81,8 +81,8 @@ class PresentationItemMapperTests: XCTestCase {
             ]
         ]
         
-        let tracksDictionary = PresentationItemMapper.mapToTracksDictionary(from: albumsInput)
+        let albumsDictionary = PresentationItemMapper.mapToAlbumsDictionary(from: tracksInput)
         
-        XCTAssertEqual(tracksDictionary, expectedTracksDictionaryOutput)
+        XCTAssertEqual(albumsDictionary, expectedAlbumsDictionaryOutput)
     }
 }

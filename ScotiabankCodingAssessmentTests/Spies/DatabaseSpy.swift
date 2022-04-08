@@ -9,41 +9,41 @@ import Foundation
 @testable import ScotiabankCodingAssessment
 
 class DatabaseSpy: Database {
-    
-    var invokedSetAlbumItems = false
-    var invokedSetAlbumItemsCount = 0
-    var invokedSetAlbumItemsParameters: (items: [AlbumEntity], Void)?
-    var invokedSetAlbumItemsParametersList = [(items: [AlbumEntity], Void)]()
-    var stubbedSetAlbumItemsError: Error?
-    
-    func setAlbumItems(_ items: [AlbumEntity]) throws {
-        invokedSetAlbumItems = true
-        invokedSetAlbumItemsCount += 1
-        invokedSetAlbumItemsParameters = (items, ())
-        invokedSetAlbumItemsParametersList.append((items, ()))
-        if let error = stubbedSetAlbumItemsError {
+
+    var invokedSetTracks = false
+    var invokedSetTracksCount = 0
+    var invokedSetTracksParameters: (tracks: [TrackEntity], Void)?
+    var invokedSetTracksParametersList = [(tracks: [TrackEntity], Void)]()
+    var stubbedSetTracksError: Error?
+
+    func setTracks(_ tracks: [TrackEntity]) throws {
+        invokedSetTracks = true
+        invokedSetTracksCount += 1
+        invokedSetTracksParameters = (tracks, ())
+        invokedSetTracksParametersList.append((tracks, ()))
+        if let error = stubbedSetTracksError {
             throw error
         }
     }
-    
-    var invokedGetAlbumItems = false
-    var invokedGetAlbumItemsCount = 0
-    var stubbedGetAlbumItemsError: Error?
-    var stubbedGetAlbumItemsResult: [AlbumEntity]! = []
-    
-    func getAlbumItems() throws -> [AlbumEntity] {
-        invokedGetAlbumItems = true
-        invokedGetAlbumItemsCount += 1
-        if let error = stubbedGetAlbumItemsError {
+
+    var invokedGetTracks = false
+    var invokedGetTracksCount = 0
+    var stubbedGetTracksError: Error?
+    var stubbedGetTracksResult: [TrackEntity]! = []
+
+    func getTracks() throws -> [TrackEntity] {
+        invokedGetTracks = true
+        invokedGetTracksCount += 1
+        if let error = stubbedGetTracksError {
             throw error
         }
-        return stubbedGetAlbumItemsResult
+        return stubbedGetTracksResult
     }
-    
+
     var invokedClear = false
     var invokedClearCount = 0
     var stubbedClearError: Error?
-    
+
     func clear() throws {
         invokedClear = true
         invokedClearCount += 1

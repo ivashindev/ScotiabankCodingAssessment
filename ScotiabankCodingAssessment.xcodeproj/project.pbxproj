@@ -11,25 +11,25 @@
 		2A3CB45927FB3AF700BC27B9 /* AlbumsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB45827FB3AF700BC27B9 /* AlbumsView.swift */; };
 		2A3CB45B27FB3AF900BC27B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3CB45A27FB3AF900BC27B9 /* Assets.xcassets */; };
 		2A3CB45E27FB3AF900BC27B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3CB45D27FB3AF900BC27B9 /* Preview Assets.xcassets */; };
-		2A3CB48427FB3BC000BC27B9 /* AlbumsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */; };
+		2A3CB48427FB3BC000BC27B9 /* TracksRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48327FB3BC000BC27B9 /* TracksRepository.swift */; };
 		2A3CB48627FB3BD800BC27B9 /* HttpsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48527FB3BD800BC27B9 /* HttpsClient.swift */; };
 		2A3CB48927FB3C1F00BC27B9 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48827FB3C1F00BC27B9 /* Database.swift */; };
 		2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */; };
 		2A3CB48E27FB3F1B00BC27B9 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */; };
 		2A85A95E27FC9FC9004D6006 /* AlbumsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */; };
-		2A85A96227FCA638004D6006 /* AlbumsRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */; };
+		2A85A96227FCA638004D6006 /* TracksRepositorySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A85A96127FCA638004D6006 /* TracksRepositorySpy.swift */; };
 		2A85A96C27FD6CE2004D6006 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A85A96B27FD6CE2004D6006 /* CachedAsyncImage */; };
 		2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */; };
 		2AFE6D9227FC6DA200A82BF5 /* CellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9127FC6DA200A82BF5 /* CellView.swift */; };
 		2AFE6D9527FC6E2F00A82BF5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */; };
 		2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */; };
 		2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */; };
-		2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9D27FC711A00A82BF5 /* Album.swift */; };
-		2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */; };
+		2AFE6D9E27FC711A00A82BF5 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6D9D27FC711A00A82BF5 /* Track.swift */; };
+		2AFE6DA127FC716700A82BF5 /* TrackEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DA027FC716700A82BF5 /* TrackEntity.swift */; };
 		2AFE6DA627FC7A8300A82BF5 /* RestRequestServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DA527FC7A8300A82BF5 /* RestRequestServiceTests.swift */; };
 		2AFE6DAC27FC7D2100A82BF5 /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DAB27FC7D2100A82BF5 /* DatabaseTests.swift */; };
-		2AFE6DAE27FC7D6A00A82BF5 /* AlbumEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DAD27FC7D6A00A82BF5 /* AlbumEntityTests.swift */; };
-		2AFE6DB127FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DB027FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift */; };
+		2AFE6DAE27FC7D6A00A82BF5 /* TrackEntityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DAD27FC7D6A00A82BF5 /* TrackEntityTests.swift */; };
+		2AFE6DB127FC7FAE00A82BF5 /* TracksFetchServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DB027FC7FAE00A82BF5 /* TracksFetchServiceTests.swift */; };
 		2AFE6DB427FC800400A82BF5 /* HTTPSClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DB327FC800400A82BF5 /* HTTPSClientSpy.swift */; };
 		2AFE6DB627FC801200A82BF5 /* DatabaseSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DB527FC801200A82BF5 /* DatabaseSpy.swift */; };
 		2AFE6DB927FC8F3D00A82BF5 /* PresentationItemMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AFE6DB827FC8F3D00A82BF5 /* PresentationItemMapperTests.swift */; };
@@ -57,24 +57,24 @@
 		2A3CB45A27FB3AF900BC27B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A3CB45D27FB3AF900BC27B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2A3CB46327FB3AFA00BC27B9 /* ScotiabankCodingAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScotiabankCodingAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepository.swift; sourceTree = "<group>"; };
+		2A3CB48327FB3BC000BC27B9 /* TracksRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepository.swift; sourceTree = "<group>"; };
 		2A3CB48527FB3BD800BC27B9 /* HttpsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpsClient.swift; sourceTree = "<group>"; };
 		2A3CB48827FB3C1F00BC27B9 /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		2A3CB48A27FB3D0900BC27B9 /* AlbumsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModel.swift; sourceTree = "<group>"; };
 		2A3CB48D27FB3F1B00BC27B9 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
 		2A85A95D27FC9FC9004D6006 /* AlbumsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewModelTests.swift; sourceTree = "<group>"; };
-		2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRepositorySpy.swift; sourceTree = "<group>"; };
+		2A85A96127FCA638004D6006 /* TracksRepositorySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRepositorySpy.swift; sourceTree = "<group>"; };
 		2AFE6D8F27FC6D0C00A82BF5 /* TracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksView.swift; sourceTree = "<group>"; };
 		2AFE6D9127FC6DA200A82BF5 /* CellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellView.swift; sourceTree = "<group>"; };
 		2AFE6D9427FC6E2F00A82BF5 /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2AFE6D9627FC6F2300A82BF5 /* PresentationItemMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItemMapper.swift; sourceTree = "<group>"; };
 		2AFE6D9A27FC6F7600A82BF5 /* PresentationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItem.swift; sourceTree = "<group>"; };
-		2AFE6D9D27FC711A00A82BF5 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
-		2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumEntity.swift; sourceTree = "<group>"; };
+		2AFE6D9D27FC711A00A82BF5 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		2AFE6DA027FC716700A82BF5 /* TrackEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntity.swift; sourceTree = "<group>"; };
 		2AFE6DA527FC7A8300A82BF5 /* RestRequestServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestRequestServiceTests.swift; sourceTree = "<group>"; };
 		2AFE6DAB27FC7D2100A82BF5 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
-		2AFE6DAD27FC7D6A00A82BF5 /* AlbumEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumEntityTests.swift; sourceTree = "<group>"; };
-		2AFE6DB027FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsFetchServiceTests.swift; sourceTree = "<group>"; };
+		2AFE6DAD27FC7D6A00A82BF5 /* TrackEntityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackEntityTests.swift; sourceTree = "<group>"; };
+		2AFE6DB027FC7FAE00A82BF5 /* TracksFetchServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksFetchServiceTests.swift; sourceTree = "<group>"; };
 		2AFE6DB327FC800400A82BF5 /* HTTPSClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPSClientSpy.swift; sourceTree = "<group>"; };
 		2AFE6DB527FC801200A82BF5 /* DatabaseSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseSpy.swift; sourceTree = "<group>"; };
 		2AFE6DB827FC8F3D00A82BF5 /* PresentationItemMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationItemMapperTests.swift; sourceTree = "<group>"; };
@@ -218,8 +218,8 @@
 		2AFE6D9C27FC70F600A82BF5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				2A3CB48327FB3BC000BC27B9 /* AlbumsRepository.swift */,
-				2AFE6D9D27FC711A00A82BF5 /* Album.swift */,
+				2A3CB48327FB3BC000BC27B9 /* TracksRepository.swift */,
+				2AFE6D9D27FC711A00A82BF5 /* Track.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -228,7 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				2A3CB48827FB3C1F00BC27B9 /* Database.swift */,
-				2AFE6DA027FC716700A82BF5 /* AlbumEntity.swift */,
+				2AFE6DA027FC716700A82BF5 /* TrackEntity.swift */,
 			);
 			path = Persistancy;
 			sourceTree = "<group>";
@@ -263,7 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				2AFE6DAB27FC7D2100A82BF5 /* DatabaseTests.swift */,
-				2AFE6DAD27FC7D6A00A82BF5 /* AlbumEntityTests.swift */,
+				2AFE6DAD27FC7D6A00A82BF5 /* TrackEntityTests.swift */,
 			);
 			path = Persistancy;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 		2AFE6DAF27FC7F9A00A82BF5 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				2AFE6DB027FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift */,
+				2AFE6DB027FC7FAE00A82BF5 /* TracksFetchServiceTests.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -281,7 +281,7 @@
 			children = (
 				2AFE6DB327FC800400A82BF5 /* HTTPSClientSpy.swift */,
 				2AFE6DB527FC801200A82BF5 /* DatabaseSpy.swift */,
-				2A85A96127FCA638004D6006 /* AlbumsRepositorySpy.swift */,
+				2A85A96127FCA638004D6006 /* TracksRepositorySpy.swift */,
 			);
 			path = Spies;
 			sourceTree = "<group>";
@@ -496,11 +496,11 @@
 				2AFE6D9B27FC6F7600A82BF5 /* PresentationItem.swift in Sources */,
 				2A3CB45927FB3AF700BC27B9 /* AlbumsView.swift in Sources */,
 				2AFE6D9727FC6F2300A82BF5 /* PresentationItemMapper.swift in Sources */,
-				2A3CB48427FB3BC000BC27B9 /* AlbumsRepository.swift in Sources */,
+				2A3CB48427FB3BC000BC27B9 /* TracksRepository.swift in Sources */,
 				2A3CB48B27FB3D0900BC27B9 /* AlbumsViewModel.swift in Sources */,
-				2AFE6D9E27FC711A00A82BF5 /* Album.swift in Sources */,
+				2AFE6D9E27FC711A00A82BF5 /* Track.swift in Sources */,
 				2A3CB48627FB3BD800BC27B9 /* HttpsClient.swift in Sources */,
-				2AFE6DA127FC716700A82BF5 /* AlbumEntity.swift in Sources */,
+				2AFE6DA127FC716700A82BF5 /* TrackEntity.swift in Sources */,
 				2A3CB45727FB3AF700BC27B9 /* ScotiabankCodingAssessmentApp.swift in Sources */,
 				2AFE6D9027FC6D0C00A82BF5 /* TracksView.swift in Sources */,
 				2A3CB48927FB3C1F00BC27B9 /* Database.swift in Sources */,
@@ -515,10 +515,10 @@
 				2A85A95E27FC9FC9004D6006 /* AlbumsViewModelTests.swift in Sources */,
 				2AFE6DB427FC800400A82BF5 /* HTTPSClientSpy.swift in Sources */,
 				2AFE6DB627FC801200A82BF5 /* DatabaseSpy.swift in Sources */,
-				2AFE6DAE27FC7D6A00A82BF5 /* AlbumEntityTests.swift in Sources */,
-				2A85A96227FCA638004D6006 /* AlbumsRepositorySpy.swift in Sources */,
+				2AFE6DAE27FC7D6A00A82BF5 /* TrackEntityTests.swift in Sources */,
+				2A85A96227FCA638004D6006 /* TracksRepositorySpy.swift in Sources */,
 				2AFE6DB927FC8F3D00A82BF5 /* PresentationItemMapperTests.swift in Sources */,
-				2AFE6DB127FC7FAE00A82BF5 /* AlbumsFetchServiceTests.swift in Sources */,
+				2AFE6DB127FC7FAE00A82BF5 /* TracksFetchServiceTests.swift in Sources */,
 				2AFE6DA627FC7A8300A82BF5 /* RestRequestServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

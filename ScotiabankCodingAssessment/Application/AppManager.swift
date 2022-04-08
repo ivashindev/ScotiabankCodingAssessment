@@ -10,18 +10,18 @@ import Foundation
 class AppManager {
     static let shared = AppManager()
     
-    let albumsRepository: AlbumsRepository
+    let tracksRepository: TracksRepository
     
     private convenience init() {
         let httpsClient = RestRequestService()
         let database = RealmDatabase()
-        let albumsRepository = AlbumsFetchService(httpsClient: httpsClient,
+        let tracksRepository = TracksFetchService(httpsClient: httpsClient,
                                                   database: database)
         
-        self.init(albumsRepository: albumsRepository)
+        self.init(tracksRepository: tracksRepository)
     }
     
-    private init(albumsRepository: AlbumsRepository) {
-        self.albumsRepository = albumsRepository
+    private init(tracksRepository: TracksRepository) {
+        self.tracksRepository = tracksRepository
     }
 }

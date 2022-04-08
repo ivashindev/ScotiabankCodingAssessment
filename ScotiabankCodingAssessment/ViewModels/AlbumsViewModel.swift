@@ -12,34 +12,34 @@ class AlbumsViewModel: ObservableObject {
     
     @Published var presentationItems: [PresentationItem] = []
     
-    private let albumsFetchService: AlbumsRepository
-    private(set) var tracksMap: [Int: [PresentationItem]] = [:]
+    private let tracksFetchService: TracksRepository
+    private(set) var albumsMap: [Int: [PresentationItem]] = [:]
     
     private var disposeBag: Set<AnyCancellable> = []
     
-    init(albumsFetchService: AlbumsRepository = AppManager.shared.albumsRepository) {
-        self.albumsFetchService = albumsFetchService
+    init(tracksFetchService: TracksRepository = AppManager.shared.tracksRepository) {
+        self.tracksFetchService = tracksFetchService
         
-        albumsFetchService
-            .fetchAlbums()
-            .replaceError(with: self.albumsFetchService.getCachedAlbums())
+        tracksFetchService
+            .fetchTracks()
+            .replaceError(with: self.tracksFetchService.getCachedTracks())
             .sink { _ in
                 
-            } receiveValue: { albums in
-                self.handleAlbumItems(albums)
+            } receiveValue: { tracks in
+                self.handleTrackItems(tracks)
             }
             .store(in: &disposeBag)
     }
     
     func willPresentTracksView(for albumId: Int) -> [PresentationItem]? {
-        return tracksMap[albumId]
+        return albumsMap[albumId]
     }
     
-    private func handleAlbumItems(_ items: [Album]) {
+    private func handleTrackItems(_ items: [Track]) {
         /// Creates hashmap for tracks first since it looks more efficient
         /// Then maps presentationItems for Albums VM from tracks hashmap
-        tracksMap = PresentationItemMapper.mapToTracksDictionary(from: items)
-        let presentationItems = PresentationItemMapper.mapToPresentationItems(from: self.tracksMap)
+        albumsMap = PresentationItemMapper.mapToAlbumsDictionary(from: items)
+        let presentationItems = PresentationItemMapper.mapToAlbumPresentationItems(from: self.albumsMap)
         DispatchQueue.main.async {
             self.presentationItems = presentationItems
         }

@@ -8,7 +8,7 @@
 import XCTest
 @testable import ScotiabankCodingAssessment
 
-class AlbumEntityTests: XCTestCase {
+class TrackEntityTests: XCTestCase {
     
     func testCreate() {
         
@@ -18,20 +18,20 @@ class AlbumEntityTests: XCTestCase {
         let url = "<url>"
         let thumbnailUrl = "<thumbnailUrl>"
         
-        let albumEntity = AlbumEntity.create(withAlbumId: albumId,
+        let trackEntity = TrackEntity.create(withAlbumId: albumId,
                                              id: id,
                                              title: title,
                                              url: url,
                                              thumbnailUrl: thumbnailUrl)
         
-        XCTAssertEqual(albumEntity.albumId, albumId)
-        XCTAssertEqual(albumEntity.id, id)
-        XCTAssertEqual(albumEntity.title, title)
-        XCTAssertEqual(albumEntity.url, url)
-        XCTAssertEqual(albumEntity.thumbnailUrl, thumbnailUrl)
+        XCTAssertEqual(trackEntity.albumId, albumId)
+        XCTAssertEqual(trackEntity.id, id)
+        XCTAssertEqual(trackEntity.title, title)
+        XCTAssertEqual(trackEntity.url, url)
+        XCTAssertEqual(trackEntity.thumbnailUrl, thumbnailUrl)
     }
     
-    func testToAlbum() {
+    func testToTrack() {
         
         let albumId = 0
         let id = 0
@@ -39,18 +39,18 @@ class AlbumEntityTests: XCTestCase {
         let url = "<url>"
         let thumbnailUrl = "<thumbnailUrl>"
         
-        let albumEntity = AlbumEntity.create(withAlbumId: albumId,
+        let trackEntity = TrackEntity.create(withAlbumId: albumId,
                                              id: id,
                                              title: title,
                                              url: url,
                                              thumbnailUrl: thumbnailUrl)
         
-        let album = albumEntity.toAlbum()
+        let track = trackEntity.toTrack()
         
-        XCTAssertEqual(albumEntity.albumId, album.albumId)
-        XCTAssertEqual(albumEntity.id, album.id)
-        XCTAssertEqual(albumEntity.title, album.title)
-        XCTAssertEqual(albumEntity.url, album.url)
-        XCTAssertEqual(albumEntity.thumbnailUrl, album.thumbnailUrl)
+        XCTAssertEqual(trackEntity.albumId, track.albumId)
+        XCTAssertEqual(trackEntity.id, track.id)
+        XCTAssertEqual(trackEntity.title, track.title)
+        XCTAssertEqual(trackEntity.url, track.url)
+        XCTAssertEqual(trackEntity.thumbnailUrl, track.thumbnailUrl)
     }
 }

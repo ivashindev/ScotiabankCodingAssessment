@@ -20,7 +20,7 @@ struct AlbumsView: View {
             ScrollView {
                 LazyVGrid(columns: AlbumsView.gridItemLayout) {
                     ForEach(viewModel.presentationItems, id: \.id) { item in
-                        let tracks = viewModel.tracksMap[item.id]!
+                        let tracks = viewModel.albumsMap[item.id]!
                         ZStack {
                             CellView(presentationItem: item)
                                 .onTapGesture {

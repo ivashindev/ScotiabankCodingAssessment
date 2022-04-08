@@ -1,5 +1,5 @@
 //
-//  AlbumsRepository.swift
+//  TracksRepository.swift
 //  ScotiabankCodingAssessment
 //
 //  Created by Dmitry Ivashin on 04.04.2022.
@@ -8,13 +8,13 @@
 import Foundation
 import Combine
 
-protocol AlbumsRepository {
+protocol TracksRepository {
     @discardableResult
-    func fetchAlbums() -> AnyPublisher<[Album], Error>
-    func getCachedAlbums() -> [Album]
+    func fetchTracks() -> AnyPublisher<[Track], Error>
+    func getCachedTracks() -> [Track]
 }
 
-class AlbumsFetchService: AlbumsRepository {
+class TracksFetchService: TracksRepository {
     
     private let httpsClient: HTTPSClient
     private let database: Database
@@ -25,37 +25,37 @@ class AlbumsFetchService: AlbumsRepository {
     }
     
     @discardableResult
-    func fetchAlbums() -> AnyPublisher<[Album], Error> {
+    func fetchTracks() -> AnyPublisher<[Track], Error> {
         let url = URL(string: Endpoint.base + Endpoint.photos)!
         let decoder = JSONDecoder()
         
         return httpsClient
             .request(url: url)
             .tryMap {
-                let albumItems = try decoder.decode([Album].self, from: $0)
-                return try self.saveAlbumsIfNeeded(albumItems)
+                let tracks = try decoder.decode([Track].self, from: $0)
+                return try self.saveTracksIfNeeded(tracks)
             }.eraseToAnyPublisher()
     }
     
-    func getCachedAlbums() -> [Album] {
+    func getCachedTracks() -> [Track] {
         do {
             return try self.database
-                .getAlbumItems()
-                .map { $0.toAlbum() }
+                .getTracks()
+                .map { $0.toTrack() }
         } catch {
             return []
         }
     }
     
-    private func saveAlbumsIfNeeded(_ albumItems: [Album]) throws ->  [Album] {
-        let currentAlbumsSnapshot = getCachedAlbums()
+    private func saveTracksIfNeeded(_ tracks: [Track]) throws ->  [Track] {
+        let currentTracksSnapshot = getCachedTracks()
         /// Updates DB only if latest data fetched differs from already saved
-        if albumItems != currentAlbumsSnapshot {
+        if tracks != currentTracksSnapshot {
             /// Operating on data snapshots requires to delete stale data first
             try database.clear()
-            let albumItemEntities = albumItems.map { $0.toAlbumItemEntity() }
-            try database.setAlbumItems(albumItemEntities)
+            let trackEntities = tracks.map { $0.toTrackEntity() }
+            try database.setTracks(trackEntities)
         }
-        return albumItems
+        return tracks
     }
 }

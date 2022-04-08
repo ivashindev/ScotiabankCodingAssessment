@@ -9,7 +9,7 @@ import XCTest
 import Combine
 @testable import ScotiabankCodingAssessment
 
-class AlbumsFetchServiceTests: XCTestCase {
+class TracksFetchServiceTests: XCTestCase {
     
     var httpsClientSpy: HTTPSClientSpy!
     var databaseSpy: DatabaseSpy!
@@ -19,157 +19,157 @@ class AlbumsFetchServiceTests: XCTestCase {
         databaseSpy = DatabaseSpy()
     }
     
-    func testFetchedAlbums() {
+    func testFetchedTracks() {
         
         let expectation = XCTestExpectation(description: "")
         
         let jsonEncoder = JSONEncoder()
-        let stubbedAlbums = [
-            Album(albumId: 0,
+        let stubbedTracks = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 2,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
-        let stubbedAlbumsData = try! jsonEncoder.encode(stubbedAlbums)
+        let stubbedTracksData = try! jsonEncoder.encode(stubbedTracks)
         
         httpsClientSpy.stubbedRequestResult = Future<Data, Error> { promise in
-            promise(.success(stubbedAlbumsData))
+            promise(.success(stubbedTracksData))
         }.eraseToAnyPublisher()
         
-        let albumsFetchService = AlbumsFetchService(httpsClient: httpsClientSpy,
+        let tracksFetchService = TracksFetchService(httpsClient: httpsClientSpy,
                                                     database: databaseSpy)
-        var fetchedAlbums: [Album] = []
+        var fetchedTracks: [Track] = []
         
-        _ = albumsFetchService
-            .fetchAlbums()
+        _ = tracksFetchService
+            .fetchTracks()
             .sink { _ in
                 
-            } receiveValue: { albums in
-                fetchedAlbums = albums
+            } receiveValue: { tracks in
+                fetchedTracks = tracks
                 expectation.fulfill()
             }
         
         wait(for: [expectation], timeout: 1.0)
-        XCTAssertEqual(fetchedAlbums, stubbedAlbums)
-        XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
+        XCTAssertEqual(fetchedTracks, stubbedTracks)
+        XCTAssertEqual(databaseSpy.invokedGetTracksCount, 1)
         XCTAssertEqual(databaseSpy.invokedClearCount, 1)
-        XCTAssertEqual(databaseSpy.invokedSetAlbumItemsCount, 1)
+        XCTAssertEqual(databaseSpy.invokedSetTracksCount, 1)
     }
     
-    func testFetchedSameAlbumsSet() {
+    func testFetchedSameTracksSet() {
         
         let expectation = XCTestExpectation(description: "")
         
         let jsonEncoder = JSONEncoder()
-        let stubbedAlbums = [
-            Album(albumId: 0,
+        let stubbedTracks = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 2,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
-        let stubbedAlbumsData = try! jsonEncoder.encode(stubbedAlbums)
+        let stubbedTracksData = try! jsonEncoder.encode(stubbedTracks)
         
         httpsClientSpy.stubbedRequestResult = Future<Data, Error> { promise in
-            promise(.success(stubbedAlbumsData))
+            promise(.success(stubbedTracksData))
         }.eraseToAnyPublisher()
         
-        databaseSpy.stubbedGetAlbumItemsResult = stubbedAlbums.map { $0.toAlbumItemEntity() }
+        databaseSpy.stubbedGetTracksResult = stubbedTracks.map { $0.toTrackEntity() }
         
-        let albumsFetchService = AlbumsFetchService(httpsClient: httpsClientSpy,
+        let tracksFetchService = TracksFetchService(httpsClient: httpsClientSpy,
                                                     database: databaseSpy)
-        var fetchedAlbums: [Album] = []
+        var fetchedTracks: [Track] = []
         
-        _ = albumsFetchService
-            .fetchAlbums()
+        _ = tracksFetchService
+            .fetchTracks()
             .sink { _ in
                 
-            } receiveValue: { albums in
-                fetchedAlbums = albums
+            } receiveValue: { tracks in
+                fetchedTracks = tracks
                 expectation.fulfill()
             }
         
         wait(for: [expectation], timeout: 1.0)
-        XCTAssertEqual(fetchedAlbums, stubbedAlbums)
-        XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
+        XCTAssertEqual(fetchedTracks, stubbedTracks)
+        XCTAssertEqual(databaseSpy.invokedGetTracksCount, 1)
         XCTAssertEqual(databaseSpy.invokedClearCount, 0)
-        XCTAssertEqual(databaseSpy.invokedSetAlbumItemsCount, 0)
+        XCTAssertEqual(databaseSpy.invokedSetTracksCount, 0)
     }
     
-    func testFetchedAlbumsEmptyArrayError() {
+    func testFetchedTracksEmptyArrayError() {
         
         let expectation = XCTestExpectation(description: "")
         
         let jsonEncoder = JSONEncoder()
-        let stubbedAlbums: [Album] = []
-        let stubbedAlbumsData = try! jsonEncoder.encode(stubbedAlbums)
+        let stubbedTracks: [Track] = []
+        let stubbedTracksData = try! jsonEncoder.encode(stubbedTracks)
         
         httpsClientSpy.stubbedRequestResult = Future<Data, Error> { promise in
-            promise(.success(stubbedAlbumsData))
+            promise(.success(stubbedTracksData))
         }.eraseToAnyPublisher()
         
-        let albumsFetchService = AlbumsFetchService(httpsClient: httpsClientSpy,
+        let tracksFetchService = TracksFetchService(httpsClient: httpsClientSpy,
                                                     database: databaseSpy)
-        var fetchedAlbums: [Album] = []
+        var fetchedTracks: [Track] = []
         
-        _ = albumsFetchService
-            .fetchAlbums()
+        _ = tracksFetchService
+            .fetchTracks()
             .sink { error in
                 expectation.fulfill()
-            } receiveValue: { albums in
-                fetchedAlbums = albums
+            } receiveValue: { tracks in
+                fetchedTracks = tracks
             }
         
         wait(for: [expectation], timeout: 1.0)
-        XCTAssertEqual(fetchedAlbums, stubbedAlbums)
-        XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
+        XCTAssertEqual(fetchedTracks, stubbedTracks)
+        XCTAssertEqual(databaseSpy.invokedGetTracksCount, 1)
         XCTAssertEqual(databaseSpy.invokedClearCount, 0)
-        XCTAssertEqual(databaseSpy.invokedSetAlbumItemsCount, 0)
+        XCTAssertEqual(databaseSpy.invokedSetTracksCount, 0)
     }
     
-    func testGetCachedAlbums() {
-        let stubbedAlbums = [
-            Album(albumId: 0,
+    func testGetCachedTracks() {
+        let stubbedTracks = [
+            Track(albumId: 0,
                   id: 0,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>"),
-            Album(albumId: 1,
+            Track(albumId: 1,
                   id: 2,
                   title: "<title>",
                   url: "<url>",
                   thumbnailUrl: "<thumbnailUrl>")
         ]
         
-        databaseSpy.stubbedGetAlbumItemsResult = stubbedAlbums.map { $0.toAlbumItemEntity() }
-        let albumsFetchService = AlbumsFetchService(httpsClient: httpsClientSpy,
+        databaseSpy.stubbedGetTracksResult = stubbedTracks.map { $0.toTrackEntity() }
+        let tracksFetchService = TracksFetchService(httpsClient: httpsClientSpy,
                                                     database: databaseSpy)
-        let fetchedAlbums = albumsFetchService.getCachedAlbums()
+        let fetchedTracks = tracksFetchService.getCachedTracks()
         
-        XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
-        XCTAssertEqual(fetchedAlbums, stubbedAlbums)
+        XCTAssertEqual(databaseSpy.invokedGetTracksCount, 1)
+        XCTAssertEqual(fetchedTracks, stubbedTracks)
     }
     
-    func testGetCachedAlbumsError() {
+    func testGetCachedTracksError() {
         
-        databaseSpy.stubbedGetAlbumItemsError = NSError(domain: "test", code: 001, userInfo: nil)
-        let albumsFetchService = AlbumsFetchService(httpsClient: httpsClientSpy,
+        databaseSpy.stubbedGetTracksError = NSError(domain: "test", code: 001, userInfo: nil)
+        let tracksFetchService = TracksFetchService(httpsClient: httpsClientSpy,
                                                     database: databaseSpy)
         
-        let fetchedAlbums = albumsFetchService.getCachedAlbums()
+        let fetchedTracks = tracksFetchService.getCachedTracks()
         
-        XCTAssertEqual(databaseSpy.invokedGetAlbumItemsCount, 1)
-        XCTAssertEqual(fetchedAlbums, [])
+        XCTAssertEqual(databaseSpy.invokedGetTracksCount, 1)
+        XCTAssertEqual(fetchedTracks, [])
     }
 }

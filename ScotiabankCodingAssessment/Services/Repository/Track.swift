@@ -1,5 +1,5 @@
 //
-//  AlbumItem.swift
+//  Track.swift
 //  ScotiabankCodingAssessment
 //
 //  Created by Dmitry Ivashin on 05.04.2022.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Album: Codable, Equatable {
+struct Track: Codable, Equatable {
     let albumId: Int
     let id: Int
     let title: String
@@ -15,9 +15,9 @@ struct Album: Codable, Equatable {
     let thumbnailUrl: String
 }
 
-extension Album {
-    func toAlbumItemEntity() -> AlbumEntity {
-        return AlbumEntity.create(withAlbumId: albumId,
+extension Track {
+    func toTrackEntity() -> TrackEntity {
+        return TrackEntity.create(withAlbumId: albumId,
                                   id: id,
                                   title: title,
                                   url: url,

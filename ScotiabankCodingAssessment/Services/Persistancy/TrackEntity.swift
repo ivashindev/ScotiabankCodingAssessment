@@ -1,5 +1,5 @@
 //
-//  AlbumItemEntity.swift
+//  TrackEntity.swift
 //  ScotiabankCodingAssessment
 //
 //  Created by Dmitry Ivashin on 05.04.2022.
@@ -7,7 +7,7 @@
 
 import RealmSwift
 
-class AlbumEntity: Object {
+class TrackEntity: Object {
     
     @objc dynamic private(set) var albumId: Int = 0
     @objc dynamic private(set) var id: Int = 0
@@ -19,8 +19,8 @@ class AlbumEntity: Object {
                        id: Int,
                        title: String,
                        url: String,
-                       thumbnailUrl: String) -> AlbumEntity {
-        let entity = AlbumEntity()
+                       thumbnailUrl: String) -> TrackEntity {
+        let entity = TrackEntity()
         entity.albumId = albumId
         entity.id = id
         entity.title = title
@@ -30,9 +30,9 @@ class AlbumEntity: Object {
     }
 }
 
-extension AlbumEntity {
-    func toAlbum() -> Album {
-        return Album(albumId: albumId,
+extension TrackEntity {
+    func toTrack() -> Track {
+        return Track(albumId: albumId,
                      id: id,
                      title: title,
                      url: url,

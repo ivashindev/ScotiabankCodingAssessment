@@ -12,24 +12,24 @@ class DatabaseTests: XCTestCase {
     
     func testSetterAndGetter() {
         
-        let albumEntity = AlbumEntity.create(withAlbumId: 0,
+        let trackEntity = TrackEntity.create(withAlbumId: 0,
                                              id: 0,
                                              title: "<title>",
                                              url: "<url>",
                                              thumbnailUrl: "<thumbnailUrl>")
-        let albumEntities = [albumEntity]
+        let trackEntities = [trackEntity]
         
         let database = RealmDatabase()
         try! database.clear()
         
-        try! database.setAlbumItems(albumEntities)
-        let expectedAlbumEntities = try! database.getAlbumItems()
-        let expectedAlbumEntitiy = expectedAlbumEntities.first!
+        try! database.setTracks(trackEntities)
+        let expectedTrackEntities = try! database.getTracks()
+        let expectedTrackEntitiy = expectedTrackEntities.first!
         
-        XCTAssertEqual(albumEntity.albumId, expectedAlbumEntitiy.albumId)
-        XCTAssertEqual(albumEntity.id, expectedAlbumEntitiy.id)
-        XCTAssertEqual(albumEntity.title, expectedAlbumEntitiy.title)
-        XCTAssertEqual(albumEntity.url, expectedAlbumEntitiy.url)
-        XCTAssertEqual(albumEntity.thumbnailUrl, expectedAlbumEntitiy.thumbnailUrl)
+        XCTAssertEqual(trackEntity.albumId, expectedTrackEntitiy.albumId)
+        XCTAssertEqual(trackEntity.id, expectedTrackEntitiy.id)
+        XCTAssertEqual(trackEntity.title, expectedTrackEntitiy.title)
+        XCTAssertEqual(trackEntity.url, expectedTrackEntitiy.url)
+        XCTAssertEqual(trackEntity.thumbnailUrl, expectedTrackEntitiy.thumbnailUrl)
     }
 }
